@@ -30,8 +30,8 @@ function Form() {
 
   return (
     <form onSubmit={getName}>
-      <input ref={inputContact} placeholder='Контакт' />
-      <button type='submit'>Добавить контакт</button>
+      <input className="uk-input uk-form-width-medium" ref={inputContact} placeholder='Контакт' />
+      <button className="uk-button uk-button-default" type='submit'>Добавить контакт</button>
     </form>
   );
 }

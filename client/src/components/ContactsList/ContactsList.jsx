@@ -19,13 +19,8 @@ function ContactsList() {
   }, [dispatch])
 
   return (
-    // <div>
-    //   <input ref={inputEl} />
-
-    //   {contacts.length > 0 ? contacts.map((contact) => <Contact key={contact.id} contact={contact} inputEl={inputEl} />) : 'Нет задач'}
-    // </div>
     <div>
-      <input ref={inputEl} />
+      <input className="uk-input uk-form-width-medium" ref={inputEl} placeholder='Новые данные контакта'/>
       <div className="uk-child-width-1-2@s uk-grid-match" uk-grid>
         {contacts.length > 0 ? contacts.map((contact) => <Contact key={contact.id} contact={contact} inputEl={inputEl} />) : 'Нет контактов'}
       </div>

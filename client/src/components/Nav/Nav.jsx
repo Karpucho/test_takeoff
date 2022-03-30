@@ -15,7 +15,7 @@ function Nav() {
 
         {(user.name) ?
           <ul className="uk-navbar-nav">
-            <li> <Link to='/form'>Форма</Link> </li>
+            <li> <Link to='/form'>Новый контакт</Link> </li>
             <li> <Link to='/contactslist'>Список контактов</Link> </li>
             <li> <Link to='/logout'>Выход</Link> </li>
           </ul>
