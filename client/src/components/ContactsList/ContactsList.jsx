@@ -20,7 +20,7 @@ function ContactsList() {
 
   return (
     <div>
-      <input className="uk-input uk-form-width-medium" ref={inputEl} placeholder='Новые данные контакта'/>
+      <input className="uk-input uk-form-width-medium" ref={inputEl} placeholder='Новые данные контакта' autoFocus={true}/>
       <div className="uk-child-width-1-2@s uk-grid-match" uk-grid>
         {contacts.length > 0 ? contacts.map((contact) => <Contact key={contact.id} contact={contact} inputEl={inputEl} />) : 'Нет контактов'}
       </div>

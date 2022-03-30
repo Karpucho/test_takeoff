@@ -30,7 +30,7 @@ function Form() {
 
   return (
     <form onSubmit={getName}>
-      <input className="uk-input uk-form-width-medium" ref={inputContact} placeholder='Контакт' />
+      <input className="uk-input uk-form-width-medium" ref={inputContact} placeholder='Контакт' autoFocus={true}/>
       <button className="uk-button uk-button-default" type='submit'>Добавить контакт</button>
     </form>
   );
