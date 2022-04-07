@@ -36,9 +36,10 @@ const sessionConfig = {
 };
 
 app.use(cors({
-  origin: ['http://localhost:3000'],
+  origin: ['*'],
   credentials: true,
 }));
+
 app.use(morgan('dev'));
 app.use(cookieParser());
 app.use(expressSession(sessionConfig));

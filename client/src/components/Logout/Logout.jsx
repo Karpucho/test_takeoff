@@ -5,7 +5,7 @@ function Logout(props) {
   const navigate = useNavigate();
 
   useEffect(()=> {
-    fetch('http://localhost:4000/logout', {
+    fetch('/logout', {
       credentials: 'include',
     })
     .then( res => res.json())

@@ -17,7 +17,7 @@ function Login() {
       email: inputEmail.current.value,
       password: inputPassword.current.value,
     }
-    fetch('http://localhost:4000/login',
+    fetch('/login',
     {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },

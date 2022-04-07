@@ -7,7 +7,7 @@ function Contact({ contact, inputEl }) {
   const dispatch = useDispatch()
 
   const fetchDeleteContact = () => {
-    fetch(`http://localhost:4000/contactslist/${contact.id}`, {
+    fetch(`/contactslist/${contact.id}`, {
       method: 'DELETE'
     })
       .then(res => res.json())
@@ -22,7 +22,7 @@ function Contact({ contact, inputEl }) {
       id: contact.id,
     }
 
-    fetch(`http://localhost:4000/contactslist/${contact.id}`, {
+    fetch(`/contactslist/${contact.id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',

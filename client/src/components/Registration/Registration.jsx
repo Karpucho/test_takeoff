@@ -19,14 +19,17 @@ function Registration() {
       email: inputEmail.current.value,
       password: inputPassword.current.value,
     }
-    fetch('http://localhost:4000/registration',
+    fetch('/registration',
     {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       credentials: 'include',
       body: JSON.stringify(user),
     })
-    .then(res => res.json())
+    .then(res => {
+      console.log(res.status);
+     return res.json()
+    })
     .then(data => dispatch(authUser(data)))
     .catch(console.error())
 

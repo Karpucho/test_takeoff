@@ -16,7 +16,7 @@ function Form() {
     const text = {
       text: inputContact.current.value,
     }
-    fetch('http://localhost:4000/form',
+    fetch('/form',
       {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },

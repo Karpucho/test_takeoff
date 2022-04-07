@@ -10,7 +10,7 @@ function ContactsList() {
   const { contacts } = useSelector(state => state.contactsReducer)
 
   useEffect(() => {
-    fetch('http://localhost:4000/contactslist', {
+    fetch('/contactslist', {
       credentials: "include"
     })
       .then(res => res.json())

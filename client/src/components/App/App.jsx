@@ -15,7 +15,7 @@ function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    fetch('http://localhost:4000/auth', {
+    fetch('/auth', {
       credentials: 'include',
     })
       .then(res => res.json())
