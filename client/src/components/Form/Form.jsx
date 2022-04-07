@@ -25,7 +25,7 @@ function Form() {
       })
       .then(res => res.json())
       .then(data => dispatch(addContact(data)))
-    navigate('/contactslist')
+       navigate('/contactslist')
   }
 
   return (

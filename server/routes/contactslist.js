@@ -13,7 +13,7 @@ router.get('/', async (req, res) => {
     },
     { raw: true },
   );
-  res.json(contactsByUser);
+  return res.json(contactsByUser);
 });
 
 router.delete('/:id', async (req, res) => {

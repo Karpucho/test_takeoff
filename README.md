@@ -1,5 +1,11 @@
 # test_takeoff
+
+Данный репозиторий является результатом тестового задания по работе с ЛК.<br>
+
+https://testfortakeoff.herokuapp.com/ - deploy
+
 Реализованы клиентская и серверная части.<br>
+
 Для запуска приложения на локальной машине необходим установленный Postgres.<br>По умолчанию юзернейм пользователя "postgres", пароль "postgres".<br>
 При необходимости поменять username и password на свои можно в файле по пути:<br> test_takeoff/server/db/config/config.json
 

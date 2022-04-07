@@ -18,11 +18,6 @@ const contactsRouter = require('./routes/contactslist');
 const PORT = process.env.PORT || 4000;
 const app = express();
 
-// app.set('view engine', 'hbs');
-// app.set('views', path.join(__dirname, 'views'));
-
-
-
 const sessionConfig = {
   store: new FileStore(),
   name: 'user_sid',
