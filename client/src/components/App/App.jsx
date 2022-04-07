@@ -22,7 +22,7 @@ function App() {
       .then(data => dispatch(authUser(data)))
       .catch(err => console.log(err.message))
 
-  }, [dispatch])
+  })
 
   return (
     <BrowserRouter>
