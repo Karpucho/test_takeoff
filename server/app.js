@@ -1,3 +1,4 @@
+require('dotenv').config();
 const path = require('path');
 const cors = require('cors');
 const express = require('express');
@@ -20,6 +21,13 @@ const app = express();
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'views'));
 
+if (process.env.NODE_ENV === 'production') {
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/build/index.html'));
+  });
+}
+
+app.use(express.static(path.join(__dirname, '../client/build')));
 app.use(express.static(path.join(__dirname, 'public')));
 
 const sessionConfig = {
