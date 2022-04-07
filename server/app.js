@@ -18,17 +18,10 @@ const contactsRouter = require('./routes/contactslist');
 const PORT = process.env.PORT || 4000;
 const app = express();
 
-app.set('view engine', 'hbs');
-app.set('views', path.join(__dirname, 'views'));
+// app.set('view engine', 'hbs');
+// app.set('views', path.join(__dirname, 'views'));
 
-app.use(express.static(path.join(__dirname, '../client/build')));
-app.use(express.static(path.join(__dirname, 'public')));
 
-if (process.env.NODE_ENV === 'production') {
-  app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../client/build/index.html'));
-  });
-}
 
 const sessionConfig = {
   store: new FileStore(),
@@ -51,6 +44,15 @@ app.use(cookieParser());
 app.use(expressSession(sessionConfig));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
+app.use(express.static(path.join(__dirname, '../client/build')));
+app.use(express.static(path.join(__dirname, 'public')));
+
+if (process.env.NODE_ENV === 'production') {
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/build/index.html'));
+  });
+}
 
 app.use('/registration', registrationRouter);
 app.use('/login', loginRouter);
